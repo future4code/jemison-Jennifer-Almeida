@@ -3,7 +3,7 @@
 1. Leia os códigos abaixo:
 
 function minhaFuncao(variavel) {
-	return variavel * 5
+    return variavel * 5
 }
 
 console.log(minhaFuncao(2))
@@ -28,7 +28,7 @@ O resultado não iria aparecer no console, seria apenas guardado na função.*/
 let textoDoUsuario = prompt("Insira um texto");
 
 const outraFuncao = function(texto) {
-	return texto.toLowerCase().includes("cenoura")
+    return texto.toLowerCase().includes("cenoura")
 }
 
 const resposta = outraFuncao(textoDoUsuario)
@@ -73,52 +73,50 @@ imprimeMensagem();
 function informacoesPessoais(nome, idade, endereco, profissao) {
 
 
-const frase = (`Meu nome é ${nome}, tenho ${idade}, moro em ${endereco}, e sou ${profissao}.`)
-console.log(frase)
+    const frase = (`Meu nome é ${nome}, tenho ${idade}, moro em ${endereco}, e sou ${profissao}.`)
+    console.log(frase)
 
 }
 
- informacoesPessoais("Jenni", 28, "BH", "professora");
+informacoesPessoais("Jenni", 28, "BH", "professora");
 
 /*
 2. Escreva as funções explicadas abaixo: */
-    
-    //a) Escreva uma função que receba 2 números como parâmetros, e, dentro da função, faça a soma das duas entradas e retorne o resultado. Invoque a função e imprima no console o resultado.
-    function somaDoisNumeros(numero1 , numero2){
+
+//a) Escreva uma função que receba 2 números como parâmetros, e, dentro da função, faça a soma das duas entradas e retorne o resultado. Invoque a função e imprima no console o resultado.
+function somaDoisNumeros(numero1, numero2) {
     let resultado = numero1 + numero2
     console.log(`O resultado é ${resultado}`);
     return resultado
-    }
+}
 
-    somaDoisNumeros(9,5);
+somaDoisNumeros(9, 5);
 
-    //b) Faça uma função que recebe 2 números e retorne um booleano que informa se o primeiro número é **maior ou igual** ao segundo.
-    function primeiroNumeroMaiorOuIgualSegundo (numero1 , numero2){
+//b) Faça uma função que recebe 2 números e retorne um booleano que informa se o primeiro número é **maior ou igual** ao segundo.
+function primeiroNumeroMaiorOuIgualSegundo(numero1, numero2) {
     let resultado = numero1 >= numero2
     console.log(`O resultado é ${resultado}`);
     return resultado
-    }  
-     primeiroNumeroMaiorOuIgualSegundo(45,12);
+}
+primeiroNumeroMaiorOuIgualSegundo(45, 12);
 
-    //c) Escreva uma função que receba um número e devolva um booleano indicando se ele é par ou não
-    function numeroPar(numero){
-    
+//c) Escreva uma função que receba um número e devolva um booleano indicando se ele é par ou não
+function numeroPar(numero) {
+
     let resultado = numero % 2 === 0
     console.log(`O resultado é ${resultado}`);
 
     return resultado
-    }
-    numeroPar(26);
+}
+numeroPar(26);
 
-    //d) Faça uma função que recebe uma mensagem (`string`) como parâmetro e imprima o tamanho dessa mensagem, juntamente com uma versão dela em letras maiúsculas.
-    function recebeString(mensagem){
-    let resultado = mensagem.length
-    console.log(`A string é ${resultado}`);
-    
-    return resultado
-    }
+//d) Faça uma função que recebe uma mensagem (`string`) como parâmetro e imprima o tamanho dessa mensagem, juntamente com uma versão dela em letras maiúsculas.
+function recebeString(mensagem) {
+    let tamanho = mensagem.length
+    console.log(`A string é \"${mensagem.toUpperCase()}\" e o seu tamanho é ${tamanho}`);
+}
 
-    recebeString("O proletáriado não tem um dia de paz.");
+recebeString("O proletáriado não tem um dia de paz.");
 
 /*
 3. Crie uma função para cada uma das operações básicas (soma, subtração, multiplicação e divisão). Em seguida, peça para o usuário inserir dois números e chame essas 4 funções com esses valores inputados pelo usuário sendo o argumento. Por fim, mostre no console o resultado das operações:
