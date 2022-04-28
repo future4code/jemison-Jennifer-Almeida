@@ -216,6 +216,8 @@ O primeiro filme foi lançado no mesmo ano do segundo? true
 
 
 
+function recebeDoisFilmes(filme) {
+
 
     let primeiroFilme = {
 
@@ -229,17 +231,13 @@ O primeiro filme foi lançado no mesmo ano do segundo? true
 
     }
 
-    let perguntaUm = ("O primeiro filme foi lançado antes do segundo?");
-    let perguntaDois = ("O primeiro filme foi lançado no mesmo ano do segundo?");
-
-    function recebeDoisFilmes(filme) {
-     
+    console.log(primeiroFilme);
+    console.log(segundoFilme);
 
     let perguntaUm = ("O primeiro filme foi lançado antes do segundo?" == false);
     let perguntaDois = (!"O primeiro filme foi lançado no mesmo ano do segundo?" == true);
 
     return perguntaUm
-    
 
 }
 
@@ -247,5 +245,5 @@ recebeDoisFilmes();
 
 
 
-
+// Vou organizar a questão 2.
 
