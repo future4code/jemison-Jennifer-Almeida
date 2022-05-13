@@ -1,0 +1,29 @@
+Exercícios de fixação do conhecimento
+Faça um resumo sobre quais são os 7 passos fundamentais para a resolução de problemas e como eles podem nos ajudar a solucionar nossos desafios de programação.
+
+Sete passos para resolver problemas na programação
+
+1. Ler atentamente o enunciado:
+Muitas vezes o problema não está na escrita de código em si, mas no não entendimento do enunciado. Reler o enunciado ajuda a bolar uma boa solução para o problema.
+
+2. Retirar as informações relevantes :
+Fazer o mapeamento das informações que estão sendo pedidas no problema e começar a anota-las. Dessa maneira, você pode começar a pensar em maneiras para escrever o código.
+
+3. Pensar na entrada e na saída:
+Esse passo ajuda na criação da lógica, se você sabe o que deve entrar e o que deve sair, pode repensar seus proximos passos.
+
+4. Fazer um esquema visual:
+
+Vale escrever passo a passo ou utilizar fluxogramas que facilitem o processo.
+
+5. Criar código feio:
+Antes de se preocupar se seu código está verboso ou muito confuso é necessário verificar se a lógica faz sentido.
+
+6. Testar força bruta:
+
+Verificar se o código está funcionando, afinal de contas, isso é o mais importante.
+
+7. Refatorar 
+Após verificar que seu código funciona é o momento de pensar maneiras para deixa-lo menos verboso e mais compreensivel. 
+OBS: Muito cuidado nesse passo! Antes um código que funcione do que um refatorado que não roda.
+
