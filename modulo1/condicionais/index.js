@@ -77,6 +77,7 @@ Para o número -10, existiria um erro, pois "mensagem" não foi declarada no sco
 c) Haverá algum erro no console? Justifique usando os conceitos de bloco ou escopo.
 Sim. A variável "mensagem", não foi declarada no scopo global. POrtanto, fora do bloco, ela não possuí um valor definido.
 
+
 Exercícios de escrita de código
 
 1. Faça um programa que pergunta ao usuário qual a idade dele e imprima no console se ele/ela pode dirigir (apenas maiores de idade).
@@ -155,4 +156,3 @@ function irAoCinema(generoDofilme, valorDoIngresso) {
     }
 }
 irAoCinema(generoDofilme, valorDoIngresso);
-/*
