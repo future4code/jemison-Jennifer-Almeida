@@ -78,6 +78,7 @@ align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 8888; /*sobreposição da bolha*/
-    transition: 300ms case-in-out 0s; /* tempo de responsividade*
+    transition: 300ms case-in-out 0s; /* tempo de responsividade*/
     
+
 }
