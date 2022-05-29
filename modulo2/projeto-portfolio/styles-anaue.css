@@ -5,23 +5,16 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Tiro';
-    color: #1E1E2A
+    color: #1E1E2A;
+    background-color: #96cff1;
 }
 
 /* Estilização Header */
 
 .header-container {
-
-    height: 100vh;
-    width: 100vw;
-    background-color: #96cff1;
-    background-image: url(./img/new.png);
-    background-repeat:no-repeat;
-    background-position: right;
-    background-size: contain;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     padding: 0 100px;
     position: relative;
@@ -37,59 +30,8 @@ p {
     letter-spacing: 2px;
 }
 
-
-
 a:hover {
     background-color: white;
-}
-
-/* Menu arredondado*/
-.checkbox-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.checkbox {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 9999;
-    transition: 300ms ease-in-out 0s;
-
-}
-
-.checkbox.traco {
-    width: 50px;
-    height: 3px;
-    background-color: #1E1E2A;
-    position: absolute;
-    border-radius: 5px;
-    transition: 0.6s ease-in-out;
-}
-
-.checkbox.traco:nth-child(1) {
-    top: 25px;
-    transform: rotate(0);
-}
-
-.checkbox.traco:nth-child(2) {
-    top: 45px;
-    transform: rotate(0);
-
-}
-
-.checkbox.traco:nth-child(3) {
-    top: 65px;
-    transform: rotate(0);
-}
-
-#toggle{
-    display: none;
 }
 
 /*MENU*/
@@ -105,7 +47,8 @@ a:hover {
     z-index: -1;
     transition: 300ms ease-in-out 0s;
 }
-.menu-itens{
+
+.menu-itens {
     top: 0;
     left: 0;
     width: 100%;
@@ -118,14 +61,20 @@ a:hover {
     visibility: hidden;
     transition: 300ms ease-in-out 0s;
 }
-.menu-itens ul{
 
-    list-style-type:none;
+.menu-itens ul {
+
+    list-style-type: none;
 }
+
 .menu-itens ul li a {
-margin: 10px 0;
-color: #1E1E2A;
-text-decoration: none;
-letter-spacing: 3px;
-font-size: 35px;
+    margin: 10px 0;
+    color: #1E1E2A;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 35px;
+}
+
+.main-conteiner {
+    padding: 0px 60px 0px 60px;
 }
