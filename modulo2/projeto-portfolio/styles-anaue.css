@@ -28,34 +28,16 @@ body {
 }
 
 h2 {
-    font-size: 30px;
-    letter-spacing: 5px;
+    font-size: 35px;
+    letter-spacing: 2px;
 }
 
 p {
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
-/*Estilização Projetos*/
 
-.lista-de-projetos{
-    margin-top: 2rem;
-    display: flex;
-}
-
-.lista-de-projetos a{
-    text-decoration: none;
-    color: #1E1E2A;
-    padding: 1rem 2rem;
-    border: 1px solid #1E1E2A;
-    min-width: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .6s ease-in-out;
-
-}
 
 a:hover {
     background-color: white;
@@ -147,4 +129,3 @@ text-decoration: none;
 letter-spacing: 3px;
 font-size: 35px;
 }
-
