@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    display: flex;
+    background-color: mediumvioletred;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+
+}
+
+header>div {
+    display: flex;
+    flex-direction: row;
+}
+
+#titulo {
+    align-self: center;
+    padding-left: 15px;
+    color: black;
+
+}
+
+#logo {
+    height: 40px;
+
+}
+
+.principal {
+    display: flex;
+    min-height: 100vh;
+}
+
+.rodape {
+    background-color: mediumvioletred;
+    height: 40px;
+    justify-self: flex-end;
+
+}
+
+#frase-rodape {
+    text-align: center;
+    padding: 8px;
+}
+
+#titulo {
+    color: black;
+    align-items: center;
+}
+
+.menu {
+    background-color: #f2d0e0;
+    min-width: 300px;
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px;
+}
+
+.item-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+.menu-img {
+    width: 16px;
+}
+
+.img-card {
+    width: 150px;
+    margin-left: 2px;
+    border: 2px solid darkgray;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.card p {
+    font-weight: bold;
+    font-size: 8px;
+    padding: 10px;
+}
