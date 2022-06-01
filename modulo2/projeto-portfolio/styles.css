@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Tiro+Gurmukhi&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tiro';
+    color: #1E1E2A
+}
+
+/* Estilização Header */
+
+.header-container {
+
+    height: 100vh;
+    width: 100vw;
+    background-color: #96cff1;
+    background-image: url(./img/new.png);
+    background-repeat:no-repeat;
+    background-position: right;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 100px;
+    position: relative;
+}
+
+h1 {
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+
+h6 {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+/*Estilização mídias Sociais*/
+
+.mídias-sociais {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.mídias-sociais a {
+    text-decoration: none;
+    color: #1E1E2A;
+    padding: 1rem 2rem;
+    border: 1px solid #1E1E2A;
+    min-width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .6s ease-in-out;
+
+}
+
+a:hover {
+    background-color: white;
+}
+
+/* Menu arredondado*/
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 300ms ease-in-out 0s;
+
+}
+
+.checkbox.traco {
+    width: 50px;
+    height: 3px;
+    background-color: #1E1E2A;
+    position: absolute;
+    border-radius: 5px;
+    transition: 0.6s ease-in-out;
+}
+
+.checkbox.traco:nth-child(1) {
+    top: 25px;
+    transform: rotate(0);
+}
+
+.checkbox.traco:nth-child(2) {
+    top: 45px;
+    transform: rotate(0);
+
+}
+
+.checkbox.traco:nth-child(3) {
+    top: 65px;
+    transform: rotate(0);
+}
+
+#toggle{
+    display: none;
+}
+
+/*MENU*/
+
+.menu {
+    position: absolute;
+    top: 26px;
+    right: 28px;
+    background-color: transparent;
+    height: 3px;
+    border-radius: 45%;
+    box-shadow: 0px 0px 0px 0px whitesmoke;
+    z-index: -1;
+    transition: 300ms ease-in-out 0s;
+}
+.menu-itens{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease-in-out 0s;
+}
+.menu-itens ul{
+
+    list-style-type:none;
+}
+.menu-itens ul li a {
+margin: 10px 0;
+color: #1E1E2A;
+text-decoration: none;
+letter-spacing: 3px;
+font-size: 35px;
+}
+
