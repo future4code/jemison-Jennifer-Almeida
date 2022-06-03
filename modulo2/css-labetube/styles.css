@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(231, 165, 42);
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 100px;
+    align-items: center;
+    justify-items: start;
+    padding: 40px 60px;
+
+}
+
+#divBusca {
+    background-color: rgb(231, 165, 42);
+    border: solid 2px rgb(231, 165, 42);
+    border-radius: 10px black;
+    width: 100px;
+    height: 100px;
+    padding: 30px 35px;
+}
+
+#txtBusca {
+
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: black;
+    height: 15px;
+    width: 50px;
+}
+
+.contaeiner{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 10px;
+
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding: 20px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100px;
+    align-items: center;
+}
+
+footer{
+    background-color: rgb(231, 165, 42);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
