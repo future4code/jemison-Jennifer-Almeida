@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  align-items: center;
+}
+
+div{
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.Logo-Labenu{
+  margin: 0px;
+  width: 32vw;
+}
+
+button{
+  margin-top: 2em;
+  background-color:aliceblue(230, 157, 22);
+  border: solid 1px gray;
+  border-radius: 3px;
+  box-shadow: gray;
+  padding: 3px;
+}
