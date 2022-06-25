@@ -5,10 +5,17 @@
 }
 
 .App {
+  background-color: #ffcdd2;
+  color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
+}
+.header{
+  height: 30px;
+  background-color: #bf5f82;
+  
 }
 
 .page-section-container {
@@ -25,4 +32,54 @@ h2 {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+}
+.bigcard-container {
+  background-color: #ffffff ;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  height: 200px;
+}
+
+.bigcard-container > img {
+  width: 70px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.bigcard-container h4 {
+  margin-bottom: 15px;
+}
+
+.bigcard-container > div {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+}
+.smallcard-container {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 550px;
+}
+
+.smallcard-container > img {
+  width: 70px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.smallcard-container h4 {
+  margin-bottom: 15px;
+}
+
+.smallcard-container > div {
+  display: flex;
+  justify-items: flex-start;
 }
