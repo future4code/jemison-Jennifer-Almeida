@@ -1,0 +1,20 @@
+.image-button-container {
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    width: 200px;
+    padding: 15px 30px;
+    margin: 10px auto;
+}
+
+.image-button-container > img {
+    width: 30px;
+    margin-right: 10px;
+}
+.controle-midias{
+    display: flex;
+    width: 500px;
+    margin: auto;
+}
