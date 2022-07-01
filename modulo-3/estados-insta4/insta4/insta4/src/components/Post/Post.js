@@ -50,16 +50,19 @@ function Post(props) {
     setCurtido(iconeCurtida)
     setCurtido(true)
     setnumeroCurtidas(numeroCurtidas + 1)
-    if(curtido == true) {
+    if (curtido == true) {
       setCurtido(false)
       setnumeroCurtidas(numeroCurtidas - 1)
     }
   }
-
+  const onChangeComentario = (event) => {
+    setComentando(event.target.value)
+  }
   const onClickComentario = () => {
     setComentando(!comentando)
     if (comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} />
+      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} value={comentando}
+        onChange={onChangeComentario} />
     }
     console.log(comentando)
   }
