@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import LogoLabenu from "./LabZap.svg";
-import { Container, AreaLaranja, Cabecalho, AreaMensagem, Rodape } from "./style";
+import { Container, AreaLaranja, Cabecalho, AreaMensagem, Rodape, Mensagem, Formulario, Chat } from "./style";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
   const mensagemAdicionada = (e) => {
 
-    e.preventDefalt();
+    e.preventDefault();
 
     const mensagemInserida = { nome: inputNome, mensagem: inputMensagem };
     const enviarNovaMensagem = [...mensagem, mensagemInserida];
@@ -31,21 +31,21 @@ function App() {
 
   const exibirMensagens = mensagem.map((mensagens, index) => {
     return (
-      <p
-        key={index}
-        nome={mensagens.nome}
-        mensagem={mensagens.mensagem}
-
-      />
+      <Mensagem key={index}>
+        <b>{mensagens.nome}</b>
+        <p>{mensagens.mensagem}</p>
+      </Mensagem>
     )
 
   });
+
   return (
     <Container>
       <Cabecalho><img src={LogoLabenu} alt="Labenu" /></Cabecalho>
       <AreaLaranja />
       <AreaMensagem>
-        <form>
+        <Chat>{exibirMensagens}</Chat>
+        <Formulario>
           <label>Nome:</label>
           <input type="text" id="nome" name="nome"
             value={inputNome}
@@ -57,7 +57,7 @@ function App() {
             onChange={handleInputMensagem}
           />
           <button onClick={mensagemAdicionada}>Enviar Mensagem</button>
-        </form>
+        </Formulario>
       </AreaMensagem>
       <AreaLaranja />
       <Rodape>Copyright © 2022 Labenu All rights reserved. R. Pais Leme, 215, Conjunto 820 Pinheiros. CEP 05424-150 </Rodape>

@@ -25,10 +25,22 @@ export const AreaMensagem=styled.main`
   height: 80vh;
   margin: 20px;
   display: flex;
+  flex-direction: column;
+  flex: 1;
   align-items: flex-end;
+  
+  #mensagem{
+    width: 400px;
+    
+  }
+`;
+
+export const Formulario = styled.form`
+  align-self: flex-start;
+  margin-top: auto;
+
   label{
     margin: 10px;
-
   }
 
   input{
@@ -37,15 +49,12 @@ export const AreaMensagem=styled.main`
       box-shadow:solid darkgray 2px; 
       padding: 1px;
   }
+
   button{
     margin-left: 10px;
     border-radius: 3px;
     border: solid darkgray 2px; 
     padding: 1px;
-  }
-  #mensagem{
-    width: 400px;
-    
   }
 `;
 
@@ -53,6 +62,14 @@ export const Rodape=styled.footer`
   grid-column-start: 1;
   grid-column-end: 4;
   background-color: darkgray;
+`;
+
+export const Mensagem = styled.div`
+    text-align: end;
+`;
+
+export const Chat = styled.div`
+
 `;
 
 export default styled;
