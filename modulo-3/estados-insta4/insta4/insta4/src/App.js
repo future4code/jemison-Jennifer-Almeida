@@ -17,7 +17,7 @@ function App() {
   const [inputComentario, setInputComentario] = useState("")
   const [postMapeado, setpostMapeado] = useState([
     { nomeUsuario: "Paulinha", fotoUsuario: "https://picsum.photos/50/50", fotoPost: "https://picsum.photos/200/150" },
-    { nomeUsuario: "Anna Delvey", fotoUsuario: "https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY", fotoPost: "https://picsum.photos/200/152" },
+    { nomeUsuario: "Anna Delvey", fotoUsuario:"https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY", fotoPost: "https://picsum.photos/200/152" },
     { nomeUsuario: "Neff", fotoUsuario: "https://picsum.photos/50/56", fotoPost: "https://picsum.photos/50/28" }
   ])
 

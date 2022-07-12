@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Link do Surge:
-whatslab-by-jenni.surge.sh
+whatslab-byjenni.surge.sh
 
 ## Available Scripts
 
