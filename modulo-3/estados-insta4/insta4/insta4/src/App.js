@@ -13,6 +13,7 @@ const MainContainer = styled.div`
 `
 function App() {
 
+
   const [inputNome, setInputNome] = useState("")
   const [inputComentario, setInputComentario] = useState("")
   const [postMapeado, setpostMapeado] = useState([
@@ -86,6 +87,25 @@ const addComentario = (e) =>{
               fotoPost={neffPubli}
             />
           </MainContainer>*/
+
+  return (
+    <MainContainer>
+      <Post
+        nomeUsuario={'paulinha'}
+        fotoUsuario={'https://picsum.photos/50/50'}
+        fotoPost={'https://picsum.photos/200/150'}
+      />
+      <Post
+        nomeUsuario={'Anna Delvey'}
+        fotoUsuario={Anna}
+        fotoPost={annaPubli}
+      />
+      <Post
+        nomeUsuario={'Neff'}
+        fotoUsuario={Neff}
+        fotoPost={neffPubli}
+      />
+    </MainContainer>
 
   )
 
