@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import axios from 'axios'
 
 
-function Home() {
+function Home({handleTrocaTela}) {
   const baseUrl = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno";
 
   const[profile, setProfile] = useState([])
@@ -22,7 +22,7 @@ function Home() {
  
   useEffect(() => {
     getProfileToChoose()
-    postChoosePerson([true])
+    postChoosePerson()
   }, [])
 
  const handleLike = () => {
@@ -70,6 +70,7 @@ function postChoosePerson() {
         bio={profile.bio}
         handleLike={handleLike}
         handleDeslike={handleDeslike}
+        handleTrocaTela = {handleTrocaTela}
       />
 
     </div>

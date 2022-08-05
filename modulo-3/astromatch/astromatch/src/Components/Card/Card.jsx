@@ -5,13 +5,13 @@ import  dislike from '../../img/dislike.png';
 import logo from '../../img/logo.jpeg';
 
 function Card(props) {
-  const {photo, name, age, bio, handleLike, handleDeslike} = props
+  const {photo, name, age, bio, handleLike, handleDeslike, handleTrocaTela} = props
   return (
     <div className="Principal">
       <CardContainer>
         <HeaderCard>
           <h1>AstroMatch</h1>
-          <button type="button"><img src={logo}/></button>
+          <button onClick={() => handleTrocaTela("TelaMatch")}><img src={logo}/></button>
         </HeaderCard>
         <ImagemCard>
           <img src={photo} alt={name} />
