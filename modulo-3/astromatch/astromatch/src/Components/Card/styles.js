@@ -8,7 +8,7 @@ margin: 20px;
 text-align: center;
 color: var(--black);
 width: 70vh;
-height: 90vh;
+height: 95vh;
 img{
     max-width: 1000px;
 }
@@ -19,9 +19,17 @@ display: flex;
 align-items: center;
 justify-content: space-around;
 padding: 2px;
+
+img{
+    height: 4em;
+    
+}
  button{
      margin-left: 50px;
-     text-align: end
+     text-align: end;
+     border-radius: 3em;
+     padding: 1px;
+     border: none;
      
  }
 `;
@@ -41,6 +49,7 @@ img{
     margin-top: 15px;
     height: 18em;
     box-shadow: solid gray 20px;
+    max-width: 18em;
 }
 h3{
     text-align: start;
@@ -51,7 +60,18 @@ h3{
 export const ControleButtons = styled.div`
 display: flex;
 justify-content: space-around;
-margin-top: 15px;
-padding: 2px;
+margin-top: 5px;
+padding: 1px;
 
-`;
+img{
+    height: 3em;
+    
+}
+
+button{
+    border-radius: 3em;
+    padding: 1px;
+    border: none;
+}
+
+`

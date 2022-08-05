@@ -22,23 +22,39 @@ function Home() {
  
   useEffect(() => {
     getProfileToChoose()
+    postChoosePerson([true])
   }, [])
 
  const handleLike = () => {
-  getProfileToChoose()
+  getProfileToChoose(true)
 
  }
 
  const handleDeslike = () => {
-  getProfileToChoose()
+  getProfileToChoose(false)
  }
 // POST Choose Person
+
+const headers ={
+  headers:{
+    ContentType: 'application/json' 
+}
+}
+
+const body = {
+ id: profile.id,
+ choice: "choice"
+
+}
+
+
+
+
 function postChoosePerson() {
   axios
-    .post(`${baseUrl} + /choose-person`)
+    .post(`${baseUrl} + /choose-person`, headers, body)
     .then((response) => {
-      alert('Itls
-      s a Match!');
+      getProfileToChoose();
     })
     .catch((err) => {
       console.log(err)
