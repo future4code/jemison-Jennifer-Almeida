@@ -22,52 +22,47 @@ function Home({handleTrocaTela}) {
  
   useEffect(() => {
     getProfileToChoose()
-    postChoosePerson()
   }, [])
 
  const handleLike = () => {
-  getProfileToChoose(true)
-
+  postChoosePerson(true)
  }
 
  const handleDeslike = () => {
-  getProfileToChoose(false)
+  postChoosePerson(false)
  }
 // POST Choose Person
 
 const headers ={
   headers:{
     ContentType: 'application/json' 
-}
-}
+  }
+}  
 
-const body = {
- id: profile.id,
- choice: "choice"
+function postChoosePerson(choice) {
+  const body = {
+    id: profile.id,
+    choice: choice
+   }
 
-}
-
-
-
-
-function postChoosePerson() {
   axios
-    .post(`${baseUrl} + /choose-person`, headers, body)
+    .post(`${baseUrl} + /choose-person`, body, headers)
     .then((response) => {
-      getProfileToChoose();
+      if(response.data.isMatch) alert('Deu match!')
+      getProfileToChoose()
     })
     .catch((err) => {
-      console.log(err)
+      console.log("Deu ruim!")
     })
 }
 
   return (
     <div className="Principal">
       <Card
-        photo={profile.photo}
-        name={profile.name}
-        age={profile.age}
-        bio={profile.bio}
+        photo={profile && profile.photo}
+        name={profile && profile.name}
+        age={profile && profile.age}
+        bio={profile && profile.bio}
         handleLike={handleLike}
         handleDeslike={handleDeslike}
         handleTrocaTela = {handleTrocaTela}
