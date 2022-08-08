@@ -8,38 +8,34 @@ function TelaMatchs(props) {
 
   const baseUrl = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno";
 
-  const [matchs, setmatchs] = useState([])
+  const [matches, setmatches] = useState([])
 
   // GET Matches
-  const getMatchs = () => {
+  const getMatches = () => {
     axios.get(`${baseUrl} + /matches`)
       .then((response) => {
-        setmatchs(response.data.matchs)
+        setmatches(response.data.matches)
       })
       .catch((err) => {
         console.log(err)
-
       })
   }
 
   useEffect(() => {
-    // postChoosePerson()
-    getMatchs()
-    putClear()
+    getMatches()
   }, [])
-
-
 
   // PUT Clear = Limpar os matchs 
   const putClear = () => {
     axios.put(`${baseUrl} + /clear`)
       .then((response) => {
-        getMatchs(response.date.matchs)
+        getMatches()
       })
       .catch((err) => {
         console.log(err)
       })
   }
+
   const handleDelete = () => {
     putClear()
   }
@@ -52,10 +48,12 @@ function TelaMatchs(props) {
           <button onClick={() => handleMatchs("Home")} type="button"><img src={logo} /></button>
         </Header>
         <div>
-          <ul></ul>
+          {matches.map(match => {
+            return <div><img src={match.photo} style={{ width: '32px' }}></img><p>{match.name}</p></div>
+          })}
         </div>
         <DivButton>
-        <button onClick={handleDelete}>Deletar</button>
+          <button onClick={handleDelete}>Deletar</button>
         </DivButton>
       </Container>
     </div>
@@ -63,5 +61,3 @@ function TelaMatchs(props) {
 }
 
 export default TelaMatchs;
-
-  // map no get, para percorrer o array
