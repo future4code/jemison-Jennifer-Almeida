@@ -5,7 +5,7 @@ function AdminHomePage() {
 
   const navigate=useNavigate();
 
-  const goToViagensOk = () => {
+  const goToTravelOk = () => {
     navigate("/admin/trips/:id")
   }
 
@@ -17,15 +17,15 @@ function AdminHomePage() {
     navigate("/")
   }
 
-  const criarNovaViagem = () =>{
+  const createNewTravel = () =>{
     navigate("/admin/trips/create")
   }
   return (
     <div>
       <h1>Página do Administrador</h1>
-      <button onClick={goToViagensOk}>Viagens existentes </button>
+      <button onClick={goToTravelOk}>Viagens existentes </button>
       <button onClick={LastPage}>Voltar</button>
-      <button onClick={criarNovaViagem}>Criar Viagem</button>
+      <button onClick={createNewTravel}>Criar Viagem</button>
       <button onClick={logout}>Logout</button>
      
     </div>
