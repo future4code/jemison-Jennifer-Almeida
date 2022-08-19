@@ -8,7 +8,7 @@ function LoginPage() {
 
   const navigate = useNavigate();
 
-  const goToPainelAdm = () => {
+  const goToAdmPage = () => {
     navigate("/admin/trips/list")
   }
 
@@ -24,10 +24,12 @@ function LoginPage() {
     e.preventDefault()
     axios.post(`${BASE_URL}login`, body)
     .then((response)=>{
-      console.log(response.data);
+      localStorage.setItem("token", response.data.token)
+      goToAdmPage()
     }).catch((error)=>{
-      console.log("Deu ruim!")
+      console.log("Deu ruim!", error.response)
     })
+
   }
 
 
@@ -61,7 +63,7 @@ function LoginPage() {
           pattern="^.{3,}"
         />
         <div>
-          <button onClick={loginOk ? goToPainelAdm:"Insira os dados para Login."}>Entrar</button>
+          <button onClick={loginOk}>Entrar</button>
           <button onClick={goToLogin}>Voltar</button>
         </div>
       </form>

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
+
 export const Container = styled.div`
+background-image: url('https://www.pinterest.es/pin/745345807070524208/');
 display: flex;
 justify-content:center;
 align-items: center;
@@ -12,7 +14,10 @@ height:100vh;
 padding:0;
 }
 `
+
+
 export const Header = styled.div`
+position: absolute;
 display: flex;
 width: 30vw;
 height: 30vh;
