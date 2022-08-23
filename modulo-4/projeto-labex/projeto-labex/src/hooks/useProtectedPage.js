@@ -1,10 +1,9 @@
 import { useEffect } from "react"
-import { usenavigate } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 
 
-const useProtectedPage = () => {
-    const navigate = usenavigate();
-
+export const useProtectedPage = () => {
+    const navigate = useNavigate();
     useEffect(() => {
         const token = localStorage.getItem("token")
         if (token === null) {
@@ -14,4 +13,3 @@ const useProtectedPage = () => {
 }
 
 
-export default useProtectedPage

@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 import { Container, Header, Section, SectionTitle, ControlButtons } from './style'
-import galaxia from './../img/galaxia.jpg'
 
 function HomePage() {
   const navigate = useNavigate()

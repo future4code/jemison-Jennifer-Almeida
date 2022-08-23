@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './../pages/HomePage/HomePage'
-import ListTripPages from './ListTripsPage';
+import ListTripsPages from './ListTripsPage/ListTripsPage'
 import ApplicationFormPage from './ApplicationFormPage';
-import LoginPage from './LoginPage';
+import LoginPage from './LoginPage/LoginPage'
 import AdminHomePage from './AdminHomePage';
 import CreateTripPage from './CreateTripPage'
 import TripDetails from "./TripDetailsPage";
@@ -13,7 +13,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route index element={<HomePage/>} />
-        <Route path="/list/trips" element={<ListTripPages/>} />
+        <Route path="/list/trips" element={<ListTripsPages/>} />
         <Route path="/trips/application" element={<ApplicationFormPage/>} />
         <Route path="/login" element={<LoginPage/>} /> 
         <Route path="/admin/trips/list" element={<AdminHomePage/>} /> 

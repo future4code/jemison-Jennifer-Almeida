@@ -1,8 +1,11 @@
 import styled from 'styled-components'
+import galaxy from './../../../img/galaxy1.jpg'
 
 
 export const Container = styled.div`
-background-image: url('https://www.pinterest.es/pin/745345807070524208/');
+background-image: url(${galaxy});
+background-size: cover;
+background-repeat: no-repeat;
 display: flex;
 justify-content:center;
 align-items: center;
@@ -21,7 +24,7 @@ position: absolute;
 display: flex;
 width: 30vw;
 height: 30vh;
-background-color: #ffffff;
+background-color: #eeeeee;
 box-sizing:  1px gray;
 border-radius: 3px;
 `
@@ -41,6 +44,7 @@ margin-left: 30px;
 margin-bottom:30px;
 padding: 5px;
 font-size: large;
+color: #120F2A ;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 `
 
@@ -50,6 +54,7 @@ justify-content: space-around;
 margin-left: 70px;
 
 button{
+  background-color: white;
   margin-right: 20px;
   padding: 3px;
   width: 120px;

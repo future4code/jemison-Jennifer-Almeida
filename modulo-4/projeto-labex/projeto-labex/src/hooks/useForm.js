@@ -7,5 +7,9 @@ export const useForm = (initialState) => {
         const { name, value } = e.target;
         setForm({ ...form, [name]: value })
     }
-    return [form, onChange]
+
+    const clear = () =>{
+        setForm(initialState)
+    }
+    return [form, onChange, clear]
 }

@@ -13,15 +13,16 @@ function ApplicationFormPage() {
   }
 
   const { form, onChange } = useForm({
-    name: '',
-    age: '',
-    applicationText: '',
-    profession: '',
-    country: ''
+    name: "",
+    age: "",
+    applicationText: "",
+    profession: "",
+    country: ""
   })
-  const id = "NoIFVcOiSgTKTIPVZwXS"
+  const id = ''
+
   const registration = () => {
-    axios.post(`${BASE_URL}trips ${id} apply`)
+    axios.post(`${BASE_URL}trips/${id}/apply`, form)
       .then((response) => {
         form(response.data)
 
@@ -30,21 +31,32 @@ function ApplicationFormPage() {
       })
   }
 
-  const registrationForm = form.apply && form.apply((forms) =>{
-    return <div>
-<h4>Nome:</h4><p>{forms.name}</p>
-
-    </div>
-
-  })
 
   return (
     <div>
-      <h1>Página de Fomulário</h1>
-      {registrationForm}
-      <button onClick={goToHome}>Voltar</button>
-      <button>Enviar</button>
+      <div className='Header'>
 
+      </div>
+      <div className='Container'>
+        <div>
+          <h1>Página de Fomulário</h1>
+        </div>
+        <form onSubmit={registration}>
+          <label htmlFor="Nome">Nome:</label>
+          <input
+            id="name"
+            name="nome"
+            type="text"
+            placeholder="Nome"
+            value={form && form.name}
+            onChange={onChange}
+            required
+            pattern="/^[a-zA-Z0-9]+$/"
+          />
+        </form>
+        <button onClick={goToHome}>Voltar</button>
+        <button>Enviar</button>
+      </div>
     </div>
   );
 }
