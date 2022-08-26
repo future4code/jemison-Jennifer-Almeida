@@ -18,7 +18,7 @@ export function useRequestData(url) {
                 setError(error)
                 console.log(error)
             })
-    }, [])
+    }, [url])
 
     return [data, isLoading, error]
 }

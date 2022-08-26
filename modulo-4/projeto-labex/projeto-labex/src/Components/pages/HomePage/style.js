@@ -20,13 +20,12 @@ padding:0;
 
 
 export const Header = styled.div`
-position: absolute;
 display: flex;
+text-align: center;
+align-items: center;
 width: 30vw;
 height: 30vh;
-background-color: #eeeeee;
-box-sizing:  1px gray;
-border-radius: 3px;
+justify-content: center;
 `
 
 export const Section = styled.div`
@@ -40,11 +39,11 @@ justify-content: center;
 export const SectionTitle = styled.div`
 display: flex;
 justify-content: center;
-margin-left: 30px;
-margin-bottom:30px;
+margin-left: 10px;
+margin-bottom:60px;
 padding: 5px;
-font-size: large;
-color: #120F2A ;
+font-size: xx-large;
+color: white ;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 `
 
@@ -55,15 +54,11 @@ margin-left: 70px;
 
 button{
   background-color: white;
-  margin-right: 20px;
+  margin-right: 50px;
   padding: 3px;
-  width: 120px;
+  width: 140px;
   height: 25px;
   border-radius: 4px;
   cursor: pointer;
-  
-
 }
-
-
 `

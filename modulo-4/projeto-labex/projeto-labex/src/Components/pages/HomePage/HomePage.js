@@ -12,22 +12,22 @@ function HomePage() {
   const goToLogin = () => {
     navigate("/login")
   }
-//<img src={galaxia}></img>
+
   return (
     <Container>
 
-        <Header>
-          <Section>
-            <SectionTitle>
-              <h1>Labex</h1>
-            </SectionTitle>
-            <ControlButtons >
-              <button onClick={goToTravelLists}>Lista de Viagens</button>
-              <button onClick={goToLogin}>Área  de Adm</button>
-            </ControlButtons >
-          </Section>
-        </Header>
-      
+      <Header>
+        <Section>
+          <SectionTitle>
+            <h1>Labex</h1>
+          </SectionTitle>
+          <ControlButtons >
+            <button onClick={goToTravelLists}>Lista de Viagens</button>
+            <button onClick={goToLogin}>Área  de Adm</button>
+          </ControlButtons >
+        </Section>
+      </Header>
+
     </Container>
   );
 }

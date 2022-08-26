@@ -6,14 +6,14 @@ const useRequestDataTrips = (url) => {
     const [isLoading, setIsLoading] = useState(undefined)
     const [data, setData] = useState(undefined)
     const [error, setError] = useState("")
-    const id = ''
+    
 
     useEffect(() => {
-        const token = localStorage.getItem("token")
+        
         setIsLoading(true);
         axios.get((url), {
             headers: {
-                auth: token
+                auth: localStorage.getItem("token")
             }
         }).then((response) => {
             setIsLoading(false)
@@ -23,7 +23,7 @@ const useRequestDataTrips = (url) => {
             setError(error)
         })
 
-    }, [])
+    }, [url])
 
     return [data, isLoading, error]
 }

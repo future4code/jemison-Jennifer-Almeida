@@ -17,8 +17,8 @@ display: flex;
 display: block;
 height: 200px;
 width: 600px;
-margin-top: 200px;
-margin-left: 100px;
+margin-top: 180px;
+margin-left: 70px;
 padding: 10px;
 `
 
