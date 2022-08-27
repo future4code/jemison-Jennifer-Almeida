@@ -3,6 +3,7 @@ import { useForm } from './../../hooks/useForm'
 import axios from 'axios'
 import { BASE_URL } from './constants/constants'
 import { useProtectedPage } from '../../hooks/useProtectedPage'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -10,6 +11,10 @@ function CreateTrip() {
   useProtectedPage();
 
   const [form, onChange, clear] = useForm({ name: "", planet: "", date: "" })
+  const navigate = useNavigate()
+  const returnPage = () =>{
+    navigate (-1)
+  }
   const newTrips = (e) => {
     e.preventDefault()
     const body = {
@@ -67,8 +72,9 @@ function CreateTrip() {
             pattern='^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/'
             title='Insira uma data.'
           />
-          <button>Enviar</button>
-          <button>Voltar</button>
+          
+          <button onSubmit={newTrips}>Enviar</button>
+          <button onClick={returnPage }>Voltar</button>
         </form>
 
       </div>

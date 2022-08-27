@@ -50,13 +50,13 @@ function TripDetails() {
       <div>
         <div key={data.trip.id}>
           <div>
-            <p>name={data.trip.name}</p>
+            <p>Nome: </p><span>{data.trip.name}</span>
           </div>
           <div>
-            <p>planet={data.trip.planet}</p>
+            <p>Planeta: </p><span>{data.trip.planet}</span>
           </div>
           <div>
-            <p>date={data.trip.date}</p>
+            <p>Data: </p><span>{data.trip.date}</span>
           </div>
           <button onClick={goToAdmPage}>Voltar</button>
         </div>
