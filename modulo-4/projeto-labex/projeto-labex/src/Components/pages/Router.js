@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './../pages/HomePage/HomePage'
 import ListTripsPages from './ListTripsPage/ListTripsPage'
-import ApplicationFormPage from './ApplicationFormPage';
+import ApplicationFormPage from './../../ApplicationFormPage/ApplicationFormPage';
 import LoginPage from './LoginPage/LoginPage'
-import AdminHomePage from './AdminHomePage';
-import CreateTripPage from './CreateTripPage'
-import TripDetails from "./TripDetailsPage";
+import AdminHomePage from './../pages/AdminHomePage/AdminHomePage'
+import CreateTripPage from './CreateTripPage/CreateTripPage'
+import TripDetails from './TripDetailsPage/TripDetailsPage';
 
 function Router() {
   return (

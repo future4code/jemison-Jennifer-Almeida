@@ -1,18 +1,20 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import useRequestDataTrips from "../../hooks/useRequestDataTrips";
-import { BASE_URL } from "./constants/constants";
+import useRequestDataTrips from "./../../../hooks/useRequestDataTrips"
+import { BASE_URL } from "./../constants/constants"
+import rocket from './../../../img/rocket.png'
+import {Header, Container, Title, ContainerTrips, Trips,TripsId, Footer, ControlButtons} from './style'
 
 function AdminHomePage() {
 
   const [data, isLoading] = useRequestDataTrips(`${BASE_URL}trips`)
   const myTrips = data && data.trips.map((trip) => {
     return (
-      <div key={trip.id}>
-        <div onClick={() => { goToTravelOk(trip.id) }}>
-          <span>{trip.name}</span>
-        </div>
-      </div >
+      <ContainerTrips key={trip.id}>
+        <Trips onClick={() => { goToTravelOk(trip.id) }}>
+          <TripsId >{trip.name}</TripsId >
+        </Trips>
+      </ContainerTrips >
     )
   })
 
@@ -35,19 +37,21 @@ function AdminHomePage() {
     navigate("/admin/trips/create")
   }
   return (
-    <div>
-      <div>
-        <h1>Página do Administrador</h1>
-      </div>
+    <Container>
+      <Header></Header>
+      <Title>
+        <h1>Página do Administrador</h1><img src={rocket}></img>
+      </Title>
       {isLoading && <h3>"Carregando as próximas viagens..."</h3>}
       {!isLoading && data && data.trips.length > 0 && myTrips}
       {!isLoading && data && data.trips.length === 0 && <h3>"Ocorreu um erro durante a requisição!"</h3>}
-      <div>
+      <ControlButtons>
         <button onClick={LastPage}>Voltar</button>
         <button onClick={createNewTravel}>Criar Viagem</button>
         <button onClick={logout}>Logout</button>
-      </div>
-    </div>
+      </ControlButtons>
+      <Footer></Footer>
+    </Container>
   );
 }
 
