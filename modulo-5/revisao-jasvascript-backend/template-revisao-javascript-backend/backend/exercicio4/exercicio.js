@@ -7,16 +7,19 @@ const firstList = [
         nome: 'Amora'
     },
     {
-        nome: 'Graveola'
+        nome: 'Graviola'
     }
 ]
 
 const secondList = [
     {
+        nome: 'Graviola'
+    },
+    {
         nome: 'Maracujá'
     },
     {
-        nome: 'Graveola'
+        nome: 'Banana'
     }
 ]
 
@@ -24,12 +27,12 @@ const definitiveList = []
 
 const bothLists = (arr1, arr2) => {
     for (let i = 0; i < arr1.length; i++) {
-        if (definitiveList.indexOf(arr1[i]) === -1) {
+        if (!definitiveList.find(obj => obj.nome === arr1[i].nome)) {
             definitiveList.push(arr1[i])
-        }
+        } 
     }
     for (let i = 0; i < arr2.length; i++) {
-        if (definitiveList.indexOf(arr2[i]) === -1) {
+        if (!definitiveList.find(obj => obj.nome === arr2[i].nome)) {
             definitiveList.push(arr2[i])
         }
     }
