@@ -1,0 +1,16 @@
+{
+  "name": "aprofundamento-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "soma": "node ./somaNumeros.js"
+  },
+  "keywords": [],
+  "author": "Jennifer Perucci",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
