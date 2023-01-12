@@ -8,11 +8,16 @@ dotenv.config();
 export const connection = knex({
 	client: "mysql",
 	connection: {
-    host: process.env.DB_HOST,
+    host: "35.226.146.116",
+    //process.env.DB_HOST,
     port: 3306,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME
+    user: "4415849-jennifer-almeida",
+    //process.env.DB_USER,
+    password: "IJJANzzcv4odDNA8gg4s",
+    //process.env.DB_PASS,
+    database: "jbl-4415849-jennifer-almeida",
+    //process.env.DB_NAME,
+    multiStatements: true
   }
 });
 

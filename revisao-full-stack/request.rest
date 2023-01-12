@@ -1,0 +1,46 @@
+### TEST
+GET http://localhost:3003/ping
+
+### CREATE A NEW CLIENT 
+POST http://localhost:3003/client
+Content-Type:application/json
+
+{
+    "name":"Sirius Black"
+}
+
+### RETURN ALL CLIENTS 
+GET http://localhost:3003/clients
+Content-Type:application/json
+
+### RETURN ALL PRODUCTS
+GET http://localhost:3003/products
+Content-Type:application/json
+
+### RETURN STOCK
+GET http://localhost:3003/stock
+Content-Type:application/json
+
+### Create Order
+POST http://localhost:3003/order
+Content-Type:application/json
+
+{
+    "fk_client": 1,
+    "delivery_date": "2023-01-12",
+    "products":[
+        {
+            "id": 11,
+            "qty": 30
+        },
+         {
+             "id": 3,
+            "qty": 1
+        },
+        {
+            "id": 4,
+            "qty": 1
+        }
+    ]
+
+}
