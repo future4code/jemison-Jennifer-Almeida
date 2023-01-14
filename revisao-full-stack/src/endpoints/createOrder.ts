@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import knex from "knex";
 import connection from "../data_base/connections";
 import { TProduct } from "../models/Products";
 
@@ -14,20 +15,17 @@ const createOrder = async (req: Request, res: Response) => {
             throw new Error("Body inválido!")
         }
         //Verificar os produtos em estoque
-        await products.forEach(async product => {
-            //pegar o stock
-            const getStock = await connection.select("qty_stock")
-                .from("Case_Products")
-                .where({ id: product.id })
-            const stockAtual = Number(getStock[0].qty_stock);
-
-            if (stockAtual < product.qty) {
+        // Pegar o estoque 
+        const idsProducts = products.map((product) => product.id);
+        const stockProducts = await connection.select('qty_stock').from('Case_Products')
+            .whereIn('id', idsProducts)
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].qty > stockProducts[i].qty_stock) {
                 throw new Error("Produto indisponível no estoque.")
+
             }
 
-
-        })
-
+        }
 
         // Fazer o pedido e atualizar o estoque 
         await products.forEach(async product => {

@@ -30,16 +30,16 @@ Content-Type:application/json
     "delivery_date": "2023-01-12",
     "products":[
         {
-            "id": 11,
-            "qty": 30
+            "id": 1,
+            "qty": 1000
         },
          {
-             "id": 3,
-            "qty": 1
+             "id": 2,
+            "qty": 465
         },
         {
-            "id": 4,
-            "qty": 1
+            "id": 3,
+            "qty": 10
         }
     ]
 
